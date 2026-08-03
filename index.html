@@ -71,6 +71,14 @@
     0%,100%{ opacity:.4; background-color: rgba(124,45,209,.24); }
     50%{ opacity:.95; background-color: rgba(236,72,153,.36); }
   }
+  @keyframes pulseGlow3{
+    0%,100%{ opacity:.32; background-color: rgba(168,85,247,.22); }
+    50%{ opacity:.7; background-color: rgba(219,39,119,.28); }
+  }
+  @keyframes floatCenter{
+    0%,100%{ transform: translate(-50%,-50%); }
+    50%{ transform: translate(calc(-50% + 26px), calc(-50% - 20px)) scale(1.06); }
+  }
 
   /* background ambience */
   .glow{ position: fixed; border-radius: 50%; filter: blur(110px); z-index:0; pointer-events:none; }
@@ -81,6 +89,10 @@
   .glow-2{
     width:420px; height:420px; background-color: rgba(124,45,209,.24); bottom:-140px; left:-100px;
     animation: float 13s ease-in-out infinite reverse, pulseGlow2 16s ease-in-out infinite;
+  }
+  .glow-3{
+    width:620px; height:620px; background-color: rgba(168,85,247,.22); top:50%; left:50%;
+    animation: floatCenter 15s ease-in-out infinite, pulseGlow3 12s ease-in-out infinite;
   }
 
   /* header */
@@ -104,7 +116,7 @@
   .brand .dot{ color: var(--gold); }
   .nav .brand{ order: 3; }
   .brand-logo{ height: 100px; width:auto; display:block; }
-  .brand-suffix{ color: var(--primary); font-weight:800; }
+  .brand-suffix{ color: var(--primary); font-weight:800; position:relative; top:-6px; }
   .nav-links{ display:flex; align-items:center; gap:32px; font-weight:500; }
   .nav-links a{ position:relative; color: var(--muted); transition: color .25s; font-size:15px; }
   .nav-links a:hover{ color: var(--ink); }
@@ -352,6 +364,7 @@
   @media (max-width: 720px){
     .brand{ font-size: 17px; }
     .brand-logo{ height: 78px; }
+    .brand-suffix{ top:-4px; }
     .nav-links, .nav-cta{ display:none; }
     .burger{ display:flex; }
     .nav-links.open{
@@ -370,6 +383,7 @@
 
 <div class="glow glow-1"></div>
 <div class="glow glow-2"></div>
+<div class="glow glow-3"></div>
 
 <header>
   <nav class="wrap nav">
