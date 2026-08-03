@@ -63,37 +63,24 @@
     0%,100%{ transform: translate(0,0) scale(1); }
     50%{ transform: translate(-12px,14px) scale(1.04); }
   }
-  @keyframes pulseGlow1{
-    0%,100%{ opacity:.4; background-color: rgba(139,61,231,.30); }
-    50%{ opacity:1; background-color: rgba(219,39,119,.42); }
-  }
-  @keyframes pulseGlow2{
-    0%,100%{ opacity:.4; background-color: rgba(124,45,209,.24); }
-    50%{ opacity:.95; background-color: rgba(236,72,153,.36); }
-  }
-  @keyframes pulseGlow3{
-    0%,100%{ opacity:.32; background-color: rgba(168,85,247,.22); }
-    50%{ opacity:.7; background-color: rgba(219,39,119,.28); }
-  }
   @keyframes floatCenter{
     0%,100%{ transform: translate(-50%,-50%); }
     50%{ transform: translate(calc(-50% + 26px), calc(-50% - 20px)) scale(1.06); }
   }
+  @keyframes fadeIn{ 0%,100%{ opacity:0; } 50%{ opacity:1; } }
 
-  /* background ambience */
-  .glow{ position: fixed; border-radius: 50%; filter: blur(110px); z-index:0; pointer-events:none; }
-  .glow-1{
-    width:480px; height:480px; background-color: rgba(139,61,231,.30); top:-160px; right:-120px;
-    animation: float 11s ease-in-out infinite, pulseGlow1 13s ease-in-out infinite;
+  /* background ambience: opacity/transform-only so the GPU can composite
+     without re-rasterizing the blurred layer on every scroll frame */
+  .glow{
+    position: fixed; border-radius: 50%; filter: blur(90px); z-index:0; pointer-events:none;
+    will-change: transform, opacity;
   }
-  .glow-2{
-    width:420px; height:420px; background-color: rgba(124,45,209,.24); bottom:-140px; left:-100px;
-    animation: float 13s ease-in-out infinite reverse, pulseGlow2 16s ease-in-out infinite;
-  }
-  .glow-3{
-    width:620px; height:620px; background-color: rgba(168,85,247,.22); top:50%; left:50%;
-    animation: floatCenter 15s ease-in-out infinite, pulseGlow3 12s ease-in-out infinite;
-  }
+  .glow-1{ width:480px; height:480px; background-color: rgba(139,61,231,.34); top:-160px; right:-120px; animation: float 11s ease-in-out infinite; }
+  .glow-1b{ width:480px; height:480px; background-color: rgba(219,39,119,.36); top:-160px; right:-120px; animation: float 11s ease-in-out infinite, fadeIn 13s ease-in-out infinite; }
+  .glow-2{ width:420px; height:420px; background-color: rgba(124,45,209,.26); bottom:-140px; left:-100px; animation: float 13s ease-in-out infinite reverse; }
+  .glow-2b{ width:420px; height:420px; background-color: rgba(236,72,153,.30); bottom:-140px; left:-100px; animation: float 13s ease-in-out infinite reverse, fadeIn 16s ease-in-out infinite; }
+  .glow-3{ width:620px; height:620px; background-color: rgba(168,85,247,.20); top:50%; left:50%; animation: floatCenter 15s ease-in-out infinite; }
+  .glow-3b{ width:620px; height:620px; background-color: rgba(219,39,119,.22); top:50%; left:50%; animation: floatCenter 15s ease-in-out infinite, fadeIn 12s ease-in-out infinite; }
 
   /* header */
   header{
@@ -382,8 +369,11 @@
 <body>
 
 <div class="glow glow-1"></div>
+<div class="glow glow-1b"></div>
 <div class="glow glow-2"></div>
+<div class="glow glow-2b"></div>
 <div class="glow glow-3"></div>
+<div class="glow glow-3b"></div>
 
 <header>
   <nav class="wrap nav">
