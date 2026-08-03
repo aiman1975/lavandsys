@@ -254,6 +254,23 @@
     background: rgba(79,70,229,.12); color: var(--primary);
     display:flex; align-items:center; justify-content:center; font-size:12px; flex-shrink:0;
   }
+  .team-heading{ font-size:22px; font-weight:800; margin: 70px 0 32px; text-align:center; }
+  .team-grid{ display:grid; grid-template-columns: 1fr 1fr; gap:22px; }
+  .team-card{
+    background: var(--panel); border:1px solid var(--panel-border); border-radius: var(--radius);
+    padding: 30px 26px; text-align:center; box-shadow: var(--shadow-soft);
+    transition: transform .3s;
+  }
+  .team-card:hover{ transform: translateY(-5px); }
+  .team-card .avatar{
+    width:60px; height:60px; border-radius:50%; margin: 0 auto 16px;
+    background: linear-gradient(135deg, var(--primary), var(--primary-deep));
+    color:#fff; display:flex; align-items:center; justify-content:center;
+    font-family:"Cairo",sans-serif; font-weight:800; font-size:17px;
+  }
+  .team-card h4{ font-size:17px; font-weight:700; margin-bottom:4px; }
+  .team-card .role{ display:block; font-size:13px; color: var(--gold); font-weight:600; margin-bottom:12px; }
+  .team-card p{ color: var(--muted); font-size:14px; }
 
   /* contact */
   .contact-box{
@@ -339,6 +356,7 @@
     .nav-links.open a{ font-size:18px; color: var(--ink); }
     .services-grid, .works-grid{ grid-template-columns: 1fr; }
     .about-points{ grid-template-columns: 1fr; }
+    .team-grid{ grid-template-columns: 1fr; }
   }
 </style>
 </head>
@@ -497,6 +515,24 @@
         </ul>
       </div>
     </div>
+
+    <div class="wrap">
+      <h3 class="team-heading reveal">فريق العمل</h3>
+      <div class="team-grid">
+        <div class="team-card reveal">
+          <div class="avatar">أ.ط</div>
+          <h4>أيمن طرابيشي</h4>
+          <span class="role">مهندس مدني</span>
+          <p>خبرة طويلة في تنفيذ المشاريع والحلول الرقمية، وتحويل الأفكار إلى مشاريع واقعية بدقة هندسية وابتكار تقني.</p>
+        </div>
+        <div class="team-card reveal">
+          <div class="avatar">م.ك</div>
+          <h4>مرهف كلاس</h4>
+          <span class="role">بكالوريوس اقتصاد ومحاسبة</span>
+          <p>خبرة طويلة في إدارة المشاريع والتنظيم الإداري، وعمل ميداني مع منظمات ومؤسسات غير حكومية (NGOs).</p>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- Contact -->
@@ -519,11 +555,11 @@
           </div>
           <div class="info-row">
             <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.5 2.1L8 9.7a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2z"/></svg></div>
-            <div><b>الهاتف</b><span>+963 XXX XXX XXX</span></div>
+            <div><b>الهاتف</b><span>+963996677976</span></div>
           </div>
           <div class="info-row">
             <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-            <div><b>الموقع</b><span id="addressText">سيتم تحديد العنوان قريبًا</span></div>
+            <div><b>الموقع</b><span id="addressText">المزة، ڤيلات غربية</span></div>
           </div>
 
           <div class="social-row">
@@ -572,7 +608,7 @@
       </div>
       <div>
         <h4>العنوان</h4>
-        <p>سيتم تحديد عنوان المكتب قريبًا.</p>
+        <p>المزة، ڤيلات غربية.</p>
         <p style="margin-top:8px;">info@lavandsys.com</p>
       </div>
     </div>
