@@ -4,6 +4,7 @@ import { useLanguage } from '@/context/LanguageContext';
 import type { TranslationKey } from '@/i18n/translations';
 
 interface Slide {
+  bgImage: string;
   headlineKey: TranslationKey;
   subtextKey: TranslationKey;
   ctaKey: TranslationKey;
@@ -13,29 +14,37 @@ interface Slide {
 
 const slides: Slide[] = [
   {
+    bgImage:
+      'https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=1600',
     headlineKey: 'hero.slide1.headline',
     subtextKey: 'hero.slide1.subtext',
     ctaKey: 'hero.slide1.cta1',
     cta2Key: 'hero.slide1.cta2',
-    accent: 'from-brand-900 via-brand-800 to-brand-700',
+    accent: 'from-brand-900/90 via-brand-800/80 to-brand-700/70',
   },
   {
+    bgImage:
+      'https://images.pexels.com/photos/31922550/pexels-photo-31922550.jpeg?auto=compress&cs=tinysrgb&w=1600',
     headlineKey: 'hero.slide2.headline',
     subtextKey: 'hero.slide2.subtext',
     ctaKey: 'hero.slide2.cta',
-    accent: 'from-teal-900 via-teal-800 to-brand-800',
+    accent: 'from-teal-900/90 via-teal-800/80 to-brand-800/70',
   },
   {
+    bgImage:
+      'https://images.pexels.com/photos/34293528/pexels-photo-34293528.jpeg?auto=compress&cs=tinysrgb&w=1600',
     headlineKey: 'hero.slide3.headline',
     subtextKey: 'hero.slide3.subtext',
     ctaKey: 'hero.slide3.cta',
-    accent: 'from-slate-900 via-brand-900 to-teal-900',
+    accent: 'from-slate-900/90 via-brand-900/80 to-teal-900/70',
   },
   {
+    bgImage:
+      'https://images.pexels.com/photos/221047/pexels-photo-221047.jpeg?auto=compress&cs=tinysrgb&w=1600',
     headlineKey: 'hero.slide4.headline',
     subtextKey: 'hero.slide4.subtext',
     ctaKey: 'hero.slide4.cta',
-    accent: 'from-brand-950 via-brand-800 to-teal-700',
+    accent: 'from-brand-950/90 via-brand-800/80 to-teal-700/70',
   },
 ];
 
@@ -92,6 +101,10 @@ export function HeroSlider() {
             idx === current ? 'opacity-100' : 'opacity-0 pointer-events-none'
           }`}
         >
+          <div
+            className="absolute inset-0 bg-cover bg-center"
+            style={{ backgroundImage: `url(${slide.bgImage})` }}
+          />
           <div
             className={`absolute inset-0 bg-gradient-to-br ${slide.accent}`}
           />
