@@ -148,7 +148,7 @@ const en: Record<TranslationKey, string> = {
     'Blockchain-based "Work-for-Goods" prototype for post-conflict Syria — Stellar-powered smart vouchers, a transparent public dashboard, and verified task-based aid distribution.',
   'portfolio.proj5.title': 'Seran',
   'portfolio.proj5.desc':
-    'Resort booking platform for the Syrian tourism market, built on Next.js and FastAPI.',
+    'Resort booking platform for the Syrian tourism market, powered by a smart automated pipeline — 100% free to use.',
 
   'about.title': 'Your Trusted Technology Partner',
   'about.subtitle':
@@ -257,7 +257,7 @@ const ar: Record<TranslationKey, string> = {
     'نموذج أولي قائم على تقنية البلوكشين لبرنامج "عمل مقابل سلع" لسوريا ما بعد النزاع — قسائم ذكية عبر شبكة Stellar، ولوحة شفافية عامة، وتوزيع مساعدات قائم على إنجاز المهام والتحقق منها.',
   'portfolio.proj5.title': 'سيران',
   'portfolio.proj5.desc':
-    'منصة حجز منتجعات للسوق السياحي السوري، مبنية على Next.js و FastAPI.',
+    'منصة حجز منتجعات للسوق السياحي السوري، مدعومة بخط أتمتة ذكي، ومجانية الاستخدام بالكامل.',
 
   'about.title': 'شريكك التقني الموثوق',
   'about.subtitle':

@@ -14,8 +14,9 @@ interface Slide {
 
 const slides: Slide[] = [
   {
+    // Diverse team collaborating around a laptop — Vitaly Gariev, Unsplash
     bgImage:
-      'https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=1600',
+      'https://images.unsplash.com/photo-1758691737124-05c5bffe46f0?q=80&w=1600&auto=format&fit=crop',
     headlineKey: 'hero.slide1.headline',
     subtextKey: 'hero.slide1.subtext',
     ctaKey: 'hero.slide1.cta1',
@@ -23,24 +24,27 @@ const slides: Slide[] = [
     accent: 'from-brand-900/90 via-brand-800/80 to-brand-700/70',
   },
   {
+    // Two people reviewing contract documents at a table — Unsplash
     bgImage:
-      'https://images.pexels.com/photos/31922550/pexels-photo-31922550.jpeg?auto=compress&cs=tinysrgb&w=1600',
+      'https://images.unsplash.com/photo-1775163024488-e88e4a71179f?q=80&w=1600&auto=format&fit=crop',
     headlineKey: 'hero.slide2.headline',
     subtextKey: 'hero.slide2.subtext',
     ctaKey: 'hero.slide2.cta',
     accent: 'from-teal-900/90 via-teal-800/80 to-brand-800/70',
   },
   {
+    // Filing cabinet / document archive — Maksym Kaharlytskyi, Unsplash
     bgImage:
-      'https://images.pexels.com/photos/34293528/pexels-photo-34293528.jpeg?auto=compress&cs=tinysrgb&w=1600',
+      'https://images.unsplash.com/photo-1569235186275-626cb53b83ce?q=80&w=1600&auto=format&fit=crop',
     headlineKey: 'hero.slide3.headline',
     subtextKey: 'hero.slide3.subtext',
     ctaKey: 'hero.slide3.cta',
     accent: 'from-slate-900/90 via-brand-900/80 to-teal-900/70',
   },
   {
+    // Aerial view of a shipping port with containers — Haris Illahi, Unsplash
     bgImage:
-      'https://images.pexels.com/photos/221047/pexels-photo-221047.jpeg?auto=compress&cs=tinysrgb&w=1600',
+      'https://images.unsplash.com/photo-1759272840712-c7e5ea852367?q=80&w=1600&auto=format&fit=crop',
     headlineKey: 'hero.slide4.headline',
     subtextKey: 'hero.slide4.subtext',
     ctaKey: 'hero.slide4.cta',
