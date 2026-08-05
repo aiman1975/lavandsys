@@ -114,12 +114,13 @@ export function Footer() {
               <li>
                 <a
                   href="tel:+963996677976"
-                  className="transition-colors hover:text-brand-600 dark:hover:text-brand-400"
+                  dir="ltr"
+                  className="inline-block text-end transition-colors hover:text-brand-600 dark:hover:text-brand-400"
                 >
                   +963 996 677 976
                 </a>
               </li>
-              <li>{t('contact.info.address')}: {dir === 'rtl' ? 'المزة، ڤيلات غربية' : 'Mazzeh, Western Villas, Damascus'}</li>
+              <li>{t('contact.info.address')}: {dir === 'rtl' ? 'دمشق، سوريا' : 'Damascus, Syria'}</li>
             </ul>
           </div>
         </div>

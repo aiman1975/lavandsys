@@ -42,7 +42,7 @@ export function Portfolio() {
   return (
     <section
       id="work"
-      className="section-pad bg-slate-50 dark:bg-slate-900/50"
+      className="section-pad bg-slate-100 dark:bg-slate-900"
     >
       <div className="mx-auto max-w-7xl container-px">
         {/* Header */}

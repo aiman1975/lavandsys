@@ -59,17 +59,18 @@ export function Contact() {
       label: t('contact.info.phone'),
       value: '+963 996 677 976',
       href: 'tel:+963996677976',
+      ltr: true,
     },
     {
       icon: MapPin,
       label: t('contact.info.address'),
-      value: lang === 'ar' ? 'المزة، ڤيلات غربية' : 'Mazzeh, Western Villas, Damascus',
-      href: 'https://maps.google.com/?q=Mazzeh+Western+Villas+Damascus',
+      value: lang === 'ar' ? 'دمشق، سوريا' : 'Damascus, Syria',
+      href: 'https://maps.google.com/?q=Damascus+Syria',
     },
   ];
 
   return (
-    <section id="contact" className="section-pad bg-slate-50 dark:bg-slate-900/50">
+    <section id="contact" className="section-pad bg-brand-50/70 dark:bg-brand-950/30">
       <div className="mx-auto max-w-7xl container-px">
         {/* Header */}
         <div className="mx-auto max-w-2xl text-center">
@@ -204,7 +205,10 @@ export function Contact() {
                         <p className="text-xs font-medium uppercase tracking-wide text-slate-400">
                           {info.label}
                         </p>
-                        <p className="text-sm font-semibold text-slate-800 transition-colors group-hover:text-brand-600 dark:text-slate-200 dark:group-hover:text-brand-400">
+                        <p
+                          dir={info.ltr ? 'ltr' : undefined}
+                          className={`text-sm font-semibold text-slate-800 transition-colors group-hover:text-brand-600 dark:text-slate-200 dark:group-hover:text-brand-400 ${info.ltr ? 'text-end' : ''}`}
+                        >
                           {info.value}
                         </p>
                       </div>
@@ -217,7 +221,7 @@ export function Contact() {
             {/* Map placeholder */}
             <div className="card flex-1 overflow-hidden">
               <a
-                href="https://maps.google.com/?q=Mazzeh+Western+Villas+Damascus"
+                href="https://maps.google.com/?q=Damascus+Syria"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="relative flex h-full min-h-[200px] items-center justify-center bg-gradient-to-br from-brand-100 to-teal-100 dark:from-brand-900/30 dark:to-teal-900/30"
@@ -226,7 +230,7 @@ export function Contact() {
                 <div className="relative text-center">
                   <MapPin className="mx-auto h-12 w-12 text-brand-600 dark:text-brand-400" />
                   <p className="mt-2 text-sm font-semibold text-slate-700 dark:text-slate-300">
-                    {lang === 'ar' ? 'المزة، ڤيلات غربية' : 'Mazzeh, Western Villas, Damascus'}
+                    {lang === 'ar' ? 'دمشق، سوريا' : 'Damascus, Syria'}
                   </p>
                   <p className="mt-1 text-xs text-slate-500">
                     {lang === 'ar' ? 'اضغط لفتح الخريطة' : 'Click to open map'}

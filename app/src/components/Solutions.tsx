@@ -89,7 +89,10 @@ export function Solutions() {
   const isRtl = dir === 'rtl';
 
   return (
-    <section id="solutions" className="section-pad relative overflow-hidden">
+    <section
+      id="solutions"
+      className="section-pad relative overflow-hidden bg-gradient-to-b from-brand-50/80 via-white to-white dark:from-brand-950/50 dark:via-slate-950 dark:to-slate-950"
+    >
       <div className="absolute inset-0 bg-grid opacity-40" />
       <div className="relative mx-auto max-w-7xl container-px">
         {/* Header */}
