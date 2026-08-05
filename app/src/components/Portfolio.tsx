@@ -44,6 +44,7 @@ const projects: Project[] = [
     titleKey: 'portfolio.proj5.title',
     descKey: 'portfolio.proj5.desc',
     gradient: 'from-slate-500 to-brand-700',
+    url: 'https://seran.fun',
   },
 ];
 
@@ -62,7 +63,6 @@ export function Portfolio() {
             {t('portfolio.title')}
           </span>
           <h2 className="section-title mt-4">{t('portfolio.title')}</h2>
-          <p className="section-subtitle">{t('portfolio.subtitle')}</p>
         </div>
 
         {/* Grid */}
