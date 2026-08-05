@@ -50,9 +50,11 @@
 }
 
 @keyframes cardCrossfade {
-  0%, 4% { opacity: 0; }
-  8%, 29% { opacity: 1; }
-  33%, 100% { opacity: 0; }
+  0% { opacity: 0; }
+  4% { opacity: 1; }
+  37% { opacity: 1; }
+  42% { opacity: 0; }
+  100% { opacity: 0; }
 }
 
 @layer utilities {

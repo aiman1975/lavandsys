@@ -81,7 +81,7 @@ export function Portfolio() {
               return (
                 <div
                   key={idx}
-                  className="group relative flex min-h-[300px] flex-col justify-end overflow-hidden rounded-2xl shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-brand-600/20"
+                  className="group relative flex min-h-[300px] flex-col justify-end overflow-hidden rounded-2xl bg-slate-950 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-brand-600/20"
                 >
                   {project.images.map((src, i) => (
                     <div
