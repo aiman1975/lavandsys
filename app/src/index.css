@@ -49,6 +49,12 @@
   }
 }
 
+@keyframes cardCrossfade {
+  0%, 4% { opacity: 0; }
+  8%, 29% { opacity: 1; }
+  33%, 100% { opacity: 0; }
+}
+
 @layer utilities {
   .text-gradient {
     @apply bg-gradient-to-r from-brand-600 via-brand-500 to-teal-500 bg-clip-text text-transparent;
