@@ -1,38 +1,49 @@
-import { FileText, Archive, Building2, Globe, Clock } from 'lucide-react';
+import { Wallet, LayoutDashboard, Sofa, Link2, Palmtree, ExternalLink } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
 import type { TranslationKey } from '@/i18n/translations';
 
-interface Category {
-  icon: typeof FileText;
+interface Project {
+  icon: typeof Wallet;
   titleKey: TranslationKey;
   descKey: TranslationKey;
   gradient: string;
+  url?: string;
 }
 
-const categories: Category[] = [
+const projects: Project[] = [
   {
-    icon: FileText,
-    titleKey: 'portfolio.cat1.title',
-    descKey: 'portfolio.cat1.desc',
+    icon: Wallet,
+    titleKey: 'portfolio.proj1.title',
+    descKey: 'portfolio.proj1.desc',
     gradient: 'from-brand-500 to-brand-700',
+    url: 'https://cva-system.web.app',
   },
   {
-    icon: Archive,
-    titleKey: 'portfolio.cat2.title',
-    descKey: 'portfolio.cat2.desc',
+    icon: LayoutDashboard,
+    titleKey: 'portfolio.proj2.title',
+    descKey: 'portfolio.proj2.desc',
     gradient: 'from-teal-500 to-teal-700',
+    url: 'https://opshub.web.app',
   },
   {
-    icon: Building2,
-    titleKey: 'portfolio.cat3.title',
-    descKey: 'portfolio.cat3.desc',
+    icon: Sofa,
+    titleKey: 'portfolio.proj3.title',
+    descKey: 'portfolio.proj3.desc',
     gradient: 'from-brand-400 to-brand-600',
+    url: 'https://gardenia-furniture.web.app',
   },
   {
-    icon: Globe,
-    titleKey: 'portfolio.cat4.title',
-    descKey: 'portfolio.cat4.desc',
+    icon: Link2,
+    titleKey: 'portfolio.proj4.title',
+    descKey: 'portfolio.proj4.desc',
     gradient: 'from-teal-400 to-brand-600',
+    url: 'https://takaful-platform-ten.vercel.app',
+  },
+  {
+    icon: Palmtree,
+    titleKey: 'portfolio.proj5.title',
+    descKey: 'portfolio.proj5.desc',
+    gradient: 'from-slate-500 to-brand-700',
   },
 ];
 
@@ -55,29 +66,36 @@ export function Portfolio() {
         </div>
 
         {/* Grid */}
-        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {categories.map((cat, idx) => {
-            const Icon = cat.icon;
+        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {projects.map((project, idx) => {
+            const Icon = project.icon;
             return (
               <div
                 key={idx}
-                className="card relative overflow-hidden p-7 text-center hover:-translate-y-1 hover:shadow-xl hover:shadow-brand-600/10"
+                className="card flex flex-col p-7 hover:-translate-y-1 hover:shadow-xl hover:shadow-brand-600/10"
               >
-                <span className="absolute end-3 top-3 inline-flex items-center gap-1.5 rounded-full bg-amber-100 px-3 py-1 text-xs font-semibold text-amber-700 dark:bg-amber-900/40 dark:text-amber-300">
-                  <Clock className="h-3 w-3" />
-                  {t('portfolio.comingSoon')}
-                </span>
                 <div
-                  className={`mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br ${cat.gradient} shadow-lg`}
+                  className={`flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br ${project.gradient} shadow-lg`}
                 >
                   <Icon className="h-7 w-7 text-white" strokeWidth={2} />
                 </div>
                 <h3 className="mt-5 text-lg font-bold text-slate-900 dark:text-white">
-                  {t(cat.titleKey)}
+                  {t(project.titleKey)}
                 </h3>
-                <p className="mt-2 text-sm leading-relaxed text-slate-500 dark:text-slate-400">
-                  {t(cat.descKey)}
+                <p className="mt-2 flex-1 text-sm leading-relaxed text-slate-500 dark:text-slate-400">
+                  {t(project.descKey)}
                 </p>
+                {project.url && (
+                  <a
+                    href={project.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-600 transition-colors hover:text-brand-700 dark:text-brand-400"
+                  >
+                    {t('portfolio.visitSite')}
+                    <ExternalLink className="h-3.5 w-3.5" />
+                  </a>
+                )}
               </div>
             );
           })}

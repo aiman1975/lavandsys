@@ -37,15 +37,17 @@ export type TranslationKey =
   | 'solutions.close'
   | 'portfolio.title'
   | 'portfolio.subtitle'
-  | 'portfolio.comingSoon'
-  | 'portfolio.cat1.title'
-  | 'portfolio.cat1.desc'
-  | 'portfolio.cat2.title'
-  | 'portfolio.cat2.desc'
-  | 'portfolio.cat3.title'
-  | 'portfolio.cat3.desc'
-  | 'portfolio.cat4.title'
-  | 'portfolio.cat4.desc'
+  | 'portfolio.visitSite'
+  | 'portfolio.proj1.title'
+  | 'portfolio.proj1.desc'
+  | 'portfolio.proj2.title'
+  | 'portfolio.proj2.desc'
+  | 'portfolio.proj3.title'
+  | 'portfolio.proj3.desc'
+  | 'portfolio.proj4.title'
+  | 'portfolio.proj4.desc'
+  | 'portfolio.proj5.title'
+  | 'portfolio.proj5.desc'
   | 'about.title'
   | 'about.subtitle'
   | 'about.body'
@@ -129,17 +131,24 @@ const en: Record<TranslationKey, string> = {
   'solutions.requestDemo': 'Request a Demo',
   'solutions.close': 'Close',
 
-  'portfolio.title': 'Our Areas of Work',
-  'portfolio.subtitle': 'A look at the categories we work in. Case studies are being added soon.',
-  'portfolio.comingSoon': 'Coming Soon',
-  'portfolio.cat1.title': 'Humanitarian Sector Systems',
-  'portfolio.cat1.desc': 'Procurement, contracts, and HR management',
-  'portfolio.cat2.title': 'Archiving & Task Management',
-  'portfolio.cat2.desc': 'Digital archiving and team coordination',
-  'portfolio.cat3.title': 'Business Systems',
-  'portfolio.cat3.desc': 'Shipping, maintenance, warehousing, bookings',
-  'portfolio.cat4.title': 'Websites & Hosting',
-  'portfolio.cat4.desc': 'Website design and hosting solutions',
+  'portfolio.title': 'Our Work',
+  'portfolio.subtitle': 'Real systems and platforms we’ve built and deployed.',
+  'portfolio.visitSite': 'Visit Live Site',
+  'portfolio.proj1.title': 'CVA System',
+  'portfolio.proj1.desc':
+    'Full-cycle cash & voucher assistance platform for humanitarian distributions — intake, scoring, multi-stage approvals, barcode-based distribution, and financial reconciliation.',
+  'portfolio.proj2.title': 'OpsHub',
+  'portfolio.proj2.desc':
+    'AI-powered platform unifying document archiving, ticketing, and project management, with Arabic/English support and smart auto-linking.',
+  'portfolio.proj3.title': 'Gardenia (Bayt Souq)',
+  'portfolio.proj3.desc':
+    'Furniture marketplace for the Syrian market where store owners list products and buyers browse and compare, with full seller privacy protection.',
+  'portfolio.proj4.title': 'Takaful Platform',
+  'portfolio.proj4.desc':
+    'Blockchain-based "Work-for-Goods" prototype for post-conflict Syria — Stellar-powered smart vouchers, a transparent public dashboard, and verified task-based aid distribution.',
+  'portfolio.proj5.title': 'Seran',
+  'portfolio.proj5.desc':
+    'Resort booking platform for the Syrian tourism market, built on Next.js and FastAPI.',
 
   'about.title': 'Your Trusted Technology Partner',
   'about.subtitle':
@@ -231,17 +240,24 @@ const ar: Record<TranslationKey, string> = {
   'solutions.requestDemo': 'اطلب عرضاً توضيحياً',
   'solutions.close': 'إغلاق',
 
-  'portfolio.title': 'مجالات عملنا',
-  'portfolio.subtitle': 'نماذج من الفئات التي نعمل عليها. تفاصيل المشاريع ودراسات الحالة قيد الإضافة قريبًا.',
-  'portfolio.comingSoon': 'قريبًا',
-  'portfolio.cat1.title': 'أنظمة القطاع الإنساني',
-  'portfolio.cat1.desc': 'مشتريات، عقود، وموارد بشرية',
-  'portfolio.cat2.title': 'الأرشفة والمهام',
-  'portfolio.cat2.desc': 'أرشفة إلكترونية وإدارة فرق',
-  'portfolio.cat3.title': 'أنظمة الأعمال',
-  'portfolio.cat3.desc': 'شحن، صيانة، مستودعات، حجوزات',
-  'portfolio.cat4.title': 'مواقع واستضافة',
-  'portfolio.cat4.desc': 'تصميم مواقع وحلول استضافة',
+  'portfolio.title': 'أعمالنا',
+  'portfolio.subtitle': 'أنظمة ومنصات حقيقية قمنا ببنائها وإطلاقها فعليًا.',
+  'portfolio.visitSite': 'زيارة الموقع',
+  'portfolio.proj1.title': 'نظام CVA لإدارة المساعدات النقدية والقسائم',
+  'portfolio.proj1.desc':
+    'منصة متكاملة لإدارة المساعدات النقدية والقسائم للتوزيعات الإنسانية — من الفرز والتقييم إلى الموافقات متعددة المراحل والتوزيع عبر الباركود والتسوية المالية.',
+  'portfolio.proj2.title': 'أوبس هَب OpsHub',
+  'portfolio.proj2.desc':
+    'منصة مدعومة بالذكاء الاصطناعي توحّد أرشفة المستندات وإدارة التذاكر والمشاريع، بدعم كامل للعربية والإنجليزية وربط تلقائي ذكي.',
+  'portfolio.proj3.title': 'غاردينيا (بيت السوق)',
+  'portfolio.proj3.desc':
+    'منصة أثاث للسوق السوري، يعرض فيها أصحاب المتاجر منتجاتهم ويتصفح المشترون ويقارنون بينها، مع حماية كاملة لخصوصية البائع.',
+  'portfolio.proj4.title': 'منصة تكافل',
+  'portfolio.proj4.desc':
+    'نموذج أولي قائم على تقنية البلوكشين لبرنامج "عمل مقابل سلع" لسوريا ما بعد النزاع — قسائم ذكية عبر شبكة Stellar، ولوحة شفافية عامة، وتوزيع مساعدات قائم على إنجاز المهام والتحقق منها.',
+  'portfolio.proj5.title': 'سيران',
+  'portfolio.proj5.desc':
+    'منصة حجز منتجعات للسوق السياحي السوري، مبنية على Next.js و FastAPI.',
 
   'about.title': 'شريكك التقني الموثوق',
   'about.subtitle':
