@@ -50,6 +50,8 @@ export type TranslationKey =
   | 'portfolio.proj5.desc'
   | 'portfolio.proj6.title'
   | 'portfolio.proj6.desc'
+  | 'portfolio.proj7.title'
+  | 'portfolio.proj7.desc'
   | 'capabilities.title'
   | 'capabilities.subtitle'
   | 'capabilities.cap1.title'
@@ -162,10 +164,13 @@ const en: Record<TranslationKey, string> = {
   'portfolio.proj6.title': 'ChamStores',
   'portfolio.proj6.desc':
     'B2B marketplace connecting suppliers and merchants — find who has what you need and order directly, with invoicing, payments, debt reminders, and mutual ratings.',
+  'portfolio.proj7.title': 'Mizan ERP',
+  'portfolio.proj7.desc':
+    'A full accounting/ERP system built for business owners to use directly, no accounting background needed — ledger, invoicing, inventory, and ready-made financial reports, with multi-currency support for exchange-rate swings.',
 
-  'capabilities.title': 'AI Capabilities We Build In',
+  'capabilities.title': 'Add-Ons That Work Even Offline',
   'capabilities.subtitle':
-    'Reusable AI building blocks we embed into custom systems — not standalone products, but capabilities we bring to whatever we build for you.',
+    'Ready-made tools and add-ons we bring into any system we build for you — tailorable to run without an internet connection, syncing automatically once one is available.',
   'capabilities.cap1.title': 'Syrian DocVault',
   'capabilities.cap1.desc':
     'AI-powered document archiving — automatic text extraction, summarization, and categorization, entity linking, and reminders for key dates.',
@@ -287,10 +292,13 @@ const ar: Record<TranslationKey, string> = {
   'portfolio.proj6.title': 'شام ستورز (ChamStores)',
   'portfolio.proj6.desc':
     'منصة تجارية بين الموردين والتجار — يجد التاجر المورد المناسب ويطلب البضاعة مباشرة، مع فوترة ومدفوعات وتذكيرات ديون وتقييمات متبادلة.',
+  'portfolio.proj7.title': 'ميزان (Mizan ERP)',
+  'portfolio.proj7.desc':
+    'نظام محاسبة وERP متكامل يستخدمه صاحب العمل مباشرة دون الحاجة لأي خبرة محاسبية — دفتر أستاذ، فواتير، مخزون، وتقارير مالية جاهزة، مع دعم متعدد العملات لمواجهة تقلبات سعر الصرف.',
 
-  'capabilities.title': 'قدرات ذكاء اصطناعي ندمجها في أنظمتنا',
+  'capabilities.title': 'إضافات تعمل حتى بدون إنترنت',
   'capabilities.subtitle':
-    'لبنات ذكاء اصطناعي جاهزة لإعادة الاستخدام ندمجها ضمن أي نظام مخصص نبنيه لك — ليست منتجات مستقلة، بل قدرات نجلبها لكل ما نطوّره لك.',
+    'أدوات وإضافات جاهزة نضيفها إلى أي نظام نبنيه لك — قابلة للتكييف لتعمل دون اتصال بالإنترنت، مع مزامنة النتائج تلقائياً عند توفر الاتصال.',
   'capabilities.cap1.title': 'الأرشفة الذكية للمستندات (Syrian DocVault)',
   'capabilities.cap1.desc':
     'نظام أرشفة مستندات مدعوم بالذكاء الاصطناعي — استخراج تلقائي للنص والملخص والتصنيف، ربط بالجهات ذات الصلة، وتنبيهات بالمواعيد المهمة.',

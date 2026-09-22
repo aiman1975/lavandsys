@@ -1,4 +1,4 @@
-import { Wallet, LayoutDashboard, Store, Archive, ExternalLink } from 'lucide-react';
+import { Wallet, LayoutDashboard, Store, Archive, Scale, ExternalLink } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
 import type { TranslationKey } from '@/i18n/translations';
 
@@ -39,6 +39,13 @@ const projects: Project[] = [
     gradient: 'from-slate-500 to-brand-700',
     url: 'https://syrian-docvault.web.app',
   },
+  {
+    icon: Scale,
+    titleKey: 'portfolio.proj7.title',
+    descKey: 'portfolio.proj7.desc',
+    gradient: 'from-teal-600 to-brand-600',
+    url: 'https://lavand-mizan.web.app',
+  },
 ];
 
 export function Portfolio() {
@@ -59,7 +66,7 @@ export function Portfolio() {
         </div>
 
         {/* Grid */}
-        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {projects.map((project, idx) => {
             const Icon = project.icon;
             return (
