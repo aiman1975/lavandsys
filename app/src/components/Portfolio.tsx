@@ -1,4 +1,4 @@
-import { Wallet, LayoutDashboard, Sofa, Link2, Palmtree, ExternalLink } from 'lucide-react';
+import { Wallet, LayoutDashboard, Store, Archive, ExternalLink } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
 import type { TranslationKey } from '@/i18n/translations';
 
@@ -8,7 +8,6 @@ interface Project {
   descKey: TranslationKey;
   gradient: string;
   url?: string;
-  images?: string[];
 }
 
 const projects: Project[] = [
@@ -25,35 +24,22 @@ const projects: Project[] = [
     descKey: 'portfolio.proj2.desc',
     gradient: 'from-teal-500 to-teal-700',
     url: 'https://opshub.web.app',
-    images: ['/screenshots/opshub/1.jpg', '/screenshots/opshub/2.jpg', '/screenshots/opshub/3.jpg'],
   },
   {
-    icon: Sofa,
-    titleKey: 'portfolio.proj3.title',
-    descKey: 'portfolio.proj3.desc',
-    gradient: 'from-brand-400 to-brand-600',
-    url: 'https://gardenia-furniture.web.app',
-    images: ['/screenshots/gardenia/1.jpg', '/screenshots/gardenia/2.jpg', '/screenshots/gardenia/3.jpg'],
+    icon: Store,
+    titleKey: 'portfolio.proj6.title',
+    descKey: 'portfolio.proj6.desc',
+    gradient: 'from-brand-600 to-teal-600',
+    url: 'https://andak.web.app',
   },
   {
-    icon: Link2,
-    titleKey: 'portfolio.proj4.title',
-    descKey: 'portfolio.proj4.desc',
-    gradient: 'from-teal-400 to-brand-600',
-    url: 'https://takaful-platform-ten.vercel.app',
-    images: ['/screenshots/takaful/1.jpg', '/screenshots/takaful/2.jpg', '/screenshots/takaful/3.jpg'],
-  },
-  {
-    icon: Palmtree,
-    titleKey: 'portfolio.proj5.title',
-    descKey: 'portfolio.proj5.desc',
+    icon: Archive,
+    titleKey: 'capabilities.cap1.title',
+    descKey: 'capabilities.cap1.desc',
     gradient: 'from-slate-500 to-brand-700',
-    url: 'https://seran.fun',
-    images: ['/screenshots/seran/1.jpg', '/screenshots/seran/2.jpg', '/screenshots/seran/3.jpg'],
+    url: 'https://syrian-docvault.web.app',
   },
 ];
-
-const CYCLE_SECONDS = 12;
 
 export function Portfolio() {
   const { t } = useLanguage();
@@ -73,56 +59,9 @@ export function Portfolio() {
         </div>
 
         {/* Grid */}
-        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {projects.map((project, idx) => {
             const Icon = project.icon;
-
-            if (project.images) {
-              return (
-                <div
-                  key={idx}
-                  className="group relative flex min-h-[300px] flex-col justify-end overflow-hidden rounded-2xl bg-slate-950 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-brand-600/20"
-                >
-                  {project.images.map((src, i) => (
-                    <div
-                      key={src}
-                      className="absolute inset-0 bg-cover bg-center"
-                      style={{
-                        backgroundImage: `url(${src})`,
-                        animation: `cardCrossfade ${CYCLE_SECONDS}s ease-in-out infinite`,
-                        animationDelay: `${i * (CYCLE_SECONDS / project.images!.length)}s`,
-                      }}
-                    />
-                  ))}
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/95 via-slate-950/55 to-slate-950/10" />
-                  <div className="relative p-6">
-                    <div
-                      className={`flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br ${project.gradient} shadow-lg`}
-                    >
-                      <Icon className="h-6 w-6 text-white" strokeWidth={2} />
-                    </div>
-                    <h3 className="mt-3 text-lg font-bold text-white">
-                      {t(project.titleKey)}
-                    </h3>
-                    <p className="mt-2 text-sm leading-relaxed text-slate-200">
-                      {t(project.descKey)}
-                    </p>
-                    {project.url && (
-                      <a
-                        href={project.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-white transition-colors hover:text-brand-200"
-                      >
-                        {t('portfolio.visitSite')}
-                        <ExternalLink className="h-3.5 w-3.5" />
-                      </a>
-                    )}
-                  </div>
-                </div>
-              );
-            }
-
             return (
               <div
                 key={idx}

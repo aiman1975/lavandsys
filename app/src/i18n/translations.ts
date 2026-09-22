@@ -48,6 +48,16 @@ export type TranslationKey =
   | 'portfolio.proj4.desc'
   | 'portfolio.proj5.title'
   | 'portfolio.proj5.desc'
+  | 'portfolio.proj6.title'
+  | 'portfolio.proj6.desc'
+  | 'capabilities.title'
+  | 'capabilities.subtitle'
+  | 'capabilities.cap1.title'
+  | 'capabilities.cap1.desc'
+  | 'capabilities.cap2.title'
+  | 'capabilities.cap2.desc'
+  | 'capabilities.cap3.title'
+  | 'capabilities.cap3.desc'
   | 'about.title'
   | 'about.subtitle'
   | 'about.body'
@@ -139,7 +149,7 @@ const en: Record<TranslationKey, string> = {
     'Full-cycle cash & voucher assistance platform for humanitarian distributions — intake, scoring, multi-stage approvals, barcode-based distribution, and financial reconciliation.',
   'portfolio.proj2.title': 'OpsHub',
   'portfolio.proj2.desc':
-    'AI-powered platform unifying document archiving, ticketing, and project management, with Arabic/English support and smart auto-linking.',
+    'Task and project management platform with visual Kanban boards, ticket tracking, and team progress dashboards, plus an AI assistant for questions about your projects and documents.',
   'portfolio.proj3.title': 'Gardenia (Bayt Souq)',
   'portfolio.proj3.desc':
     'Furniture marketplace for the Syrian market where store owners list products and buyers browse and compare, with full seller privacy protection.',
@@ -149,6 +159,22 @@ const en: Record<TranslationKey, string> = {
   'portfolio.proj5.title': 'Seran',
   'portfolio.proj5.desc':
     'Resort booking platform for the Syrian tourism market, powered by a smart automated pipeline — 100% free to use.',
+  'portfolio.proj6.title': 'ChamStores',
+  'portfolio.proj6.desc':
+    'B2B marketplace connecting suppliers and merchants — find who has what you need and order directly, with invoicing, payments, debt reminders, and mutual ratings.',
+
+  'capabilities.title': 'AI Capabilities We Build In',
+  'capabilities.subtitle':
+    'Reusable AI building blocks we embed into custom systems — not standalone products, but capabilities we bring to whatever we build for you.',
+  'capabilities.cap1.title': 'Syrian DocVault',
+  'capabilities.cap1.desc':
+    'AI-powered document archiving — automatic text extraction, summarization, and categorization, entity linking, and reminders for key dates.',
+  'capabilities.cap2.title': 'Document Intelligence',
+  'capabilities.cap2.desc':
+    'A desktop app that works fully offline — semantic and keyword search across your documents, duplicate detection, auto-classification, and timeline extraction, with complete data privacy. Like our other products, this can be tailored to run without an internet connection wherever possible, syncing back once a connection is available.',
+  'capabilities.cap3.title': 'LAVAND-STT',
+  'capabilities.cap3.desc':
+    'AI speech-to-text with speaker diarization and automatic summarization, ready to embed into any app that needs meetings or calls turned into transcripts and summaries. Can be tailored to run offline as a desktop app, syncing results automatically once a connection is available.',
 
   'about.title': 'Your Trusted Technology Partner',
   'about.subtitle':
@@ -248,7 +274,7 @@ const ar: Record<TranslationKey, string> = {
     'منصة متكاملة لإدارة المساعدات النقدية والقسائم للتوزيعات الإنسانية — من الفرز والتقييم إلى الموافقات متعددة المراحل والتوزيع عبر الباركود والتسوية المالية.',
   'portfolio.proj2.title': 'أوبس هَب OpsHub',
   'portfolio.proj2.desc':
-    'منصة مدعومة بالذكاء الاصطناعي توحّد أرشفة المستندات وإدارة التذاكر والمشاريع، بدعم كامل للعربية والإنجليزية وربط تلقائي ذكي.',
+    'أداة لإدارة المهام والمشاريع بلوحات Kanban مرئية، مع تتبع للتذاكر وتقدم الفريق، ومساعد ذكاء اصطناعي للإجابة عن أسئلتك حول مشاريعك ومستنداتك.',
   'portfolio.proj3.title': 'غاردينيا (بيت السوق)',
   'portfolio.proj3.desc':
     'منصة أثاث للسوق السوري، يعرض فيها أصحاب المتاجر منتجاتهم ويتصفح المشترون ويقارنون بينها، مع حماية كاملة لخصوصية البائع.',
@@ -258,6 +284,22 @@ const ar: Record<TranslationKey, string> = {
   'portfolio.proj5.title': 'سيران',
   'portfolio.proj5.desc':
     'منصة حجز منتجعات للسوق السياحي السوري، مدعومة بخط أتمتة ذكي، ومجانية الاستخدام بالكامل.',
+  'portfolio.proj6.title': 'شام ستورز (ChamStores)',
+  'portfolio.proj6.desc':
+    'منصة تجارية بين الموردين والتجار — يجد التاجر المورد المناسب ويطلب البضاعة مباشرة، مع فوترة ومدفوعات وتذكيرات ديون وتقييمات متبادلة.',
+
+  'capabilities.title': 'قدرات ذكاء اصطناعي ندمجها في أنظمتنا',
+  'capabilities.subtitle':
+    'لبنات ذكاء اصطناعي جاهزة لإعادة الاستخدام ندمجها ضمن أي نظام مخصص نبنيه لك — ليست منتجات مستقلة، بل قدرات نجلبها لكل ما نطوّره لك.',
+  'capabilities.cap1.title': 'الأرشفة الذكية للمستندات (Syrian DocVault)',
+  'capabilities.cap1.desc':
+    'نظام أرشفة مستندات مدعوم بالذكاء الاصطناعي — استخراج تلقائي للنص والملخص والتصنيف، ربط بالجهات ذات الصلة، وتنبيهات بالمواعيد المهمة.',
+  'capabilities.cap2.title': 'ذكاء المستندات (بحث محلي)',
+  'capabilities.cap2.desc':
+    'تطبيق مكتبي يعمل بالكامل دون اتصال بالإنترنت — بحث دلالي وبالكلمات المفتاحية داخل مستنداتك، كشف التكرار، تصنيف تلقائي، وتحليل زمني للمحتوى، مع خصوصية تامة لبياناتك. مثل باقي منتجاتنا، يمكن تكييف هذا التطبيق ليعمل دون إنترنت قدر الإمكان، ومزامنة النتائج تلقائياً عند توفر الاتصال.',
+  'capabilities.cap3.title': 'LAVAND-STT',
+  'capabilities.cap3.desc':
+    'تفريغ صوتي ذكي مع تمييز المتحدثين وتلخيص تلقائي بالذكاء الاصطناعي، قدرة جاهزة للدمج داخل أي تطبيق يحتاج تحويل الاجتماعات أو المكالمات إلى نصوص وملخصات. يمكن تكييفه ليعمل كتطبيق مكتبي دون اتصال بالإنترنت، مع مزامنة النتائج تلقائياً عند توفر الاتصال.',
 
   'about.title': 'شريكك التقني الموثوق',
   'about.subtitle':
