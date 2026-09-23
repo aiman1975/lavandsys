@@ -47,7 +47,7 @@ const solutions: Solution[] = [
     descKey: 'solutions.archiving.desc',
     detailsKey: detailKeys.archiving,
     features: ['solutions.archiving.title'],
-    gradient: 'from-teal-500 to-teal-700',
+    gradient: 'from-emerald-500 to-teal-600',
   },
   {
     icon: Users,
@@ -55,7 +55,7 @@ const solutions: Solution[] = [
     descKey: 'solutions.team.desc',
     detailsKey: detailKeys.team,
     features: ['solutions.team.title'],
-    gradient: 'from-brand-400 to-brand-600',
+    gradient: 'from-violet-500 to-violet-700',
   },
   {
     icon: Building2,
@@ -63,7 +63,7 @@ const solutions: Solution[] = [
     descKey: 'solutions.business.desc',
     detailsKey: detailKeys.business,
     features: ['solutions.business.title'],
-    gradient: 'from-teal-400 to-brand-600',
+    gradient: 'from-amber-500 to-orange-600',
   },
   {
     icon: Globe,
@@ -71,7 +71,7 @@ const solutions: Solution[] = [
     descKey: 'solutions.websites.desc',
     detailsKey: detailKeys.websites,
     features: ['solutions.websites.title'],
-    gradient: 'from-brand-500 to-teal-500',
+    gradient: 'from-rose-500 to-rose-700',
   },
   {
     icon: Server,
@@ -79,7 +79,7 @@ const solutions: Solution[] = [
     descKey: 'solutions.hosting.desc',
     detailsKey: detailKeys.hosting,
     features: ['solutions.hosting.title'],
-    gradient: 'from-slate-500 to-brand-700',
+    gradient: 'from-indigo-500 to-indigo-700',
   },
 ];
 

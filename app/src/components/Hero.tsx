@@ -1,6 +1,7 @@
 import { lazy, Suspense } from 'react';
 import { ArrowRight } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
+import { WaveBackground } from '@/components/WaveBackground';
 import type { TranslationKey } from '@/i18n/translations';
 
 const Hero3DCanvas = lazy(() =>
@@ -22,6 +23,7 @@ export function Hero() {
       id="home"
       className="relative w-full overflow-hidden bg-gradient-to-b from-brand-50/80 via-white to-white pt-28 pb-14 dark:from-brand-950/50 dark:via-slate-950 dark:to-slate-950 lg:pt-32"
     >
+      <WaveBackground />
       <div className="absolute inset-0 bg-grid opacity-40" />
 
       <div className="relative z-10 mx-auto w-full max-w-7xl container-px">
