@@ -6,19 +6,14 @@ export type TranslationKey =
   | 'nav.work'
   | 'nav.about'
   | 'nav.contact'
-  | 'hero.slide1.headline'
-  | 'hero.slide1.subtext'
-  | 'hero.slide1.cta1'
-  | 'hero.slide1.cta2'
-  | 'hero.slide2.headline'
-  | 'hero.slide2.subtext'
-  | 'hero.slide2.cta'
-  | 'hero.slide3.headline'
-  | 'hero.slide3.subtext'
-  | 'hero.slide3.cta'
-  | 'hero.slide4.headline'
-  | 'hero.slide4.subtext'
-  | 'hero.slide4.cta'
+  | 'hero.headline'
+  | 'hero.subtext'
+  | 'hero.cta1'
+  | 'hero.cta2'
+  | 'hero.point1.title'
+  | 'hero.point1.desc'
+  | 'hero.point2.title'
+  | 'hero.point2.desc'
   | 'solutions.title'
   | 'solutions.subtitle'
   | 'solutions.ngo.title'
@@ -38,6 +33,7 @@ export type TranslationKey =
   | 'portfolio.title'
   | 'portfolio.subtitle'
   | 'portfolio.visitSite'
+  | 'portfolio.live'
   | 'portfolio.proj1.title'
   | 'portfolio.proj1.desc'
   | 'portfolio.proj2.title'
@@ -101,24 +97,17 @@ const en: Record<TranslationKey, string> = {
   'nav.about': 'About',
   'nav.contact': 'Contact',
 
-  'hero.slide1.headline': 'Custom-Built Systems for NGOs & Businesses',
-  'hero.slide1.subtext':
+  'hero.headline': 'Custom-Built Systems for NGOs & Businesses',
+  'hero.subtext':
     'From process automation to digital presence — we build what you need.',
-  'hero.slide1.cta1': 'Explore Our Solutions',
-  'hero.slide1.cta2': 'Contact Us',
-  'hero.slide2.headline': 'Integrated Management Systems',
-  'hero.slide2.subtext':
+  'hero.cta1': 'Explore Our Solutions',
+  'hero.cta2': 'Contact Us',
+  'hero.point1.title': 'Integrated Management Systems',
+  'hero.point1.desc':
     'Streamline procurement, contracts, HR, and oversight with tailor-made solutions.',
-  'hero.slide2.cta': 'Learn More',
-  'hero.slide3.headline': 'Secure, Smart, Searchable',
-  'hero.slide3.subtext':
+  'hero.point2.title': 'Secure, Smart, Searchable',
+  'hero.point2.desc':
     'Digitize and organize your documents for easy access and compliance.',
-  'hero.slide3.cta': 'Discover Archiving',
-  'hero.slide4.headline':
-    'Efficiency for Shipping, Maintenance, Warehousing & Bookings',
-  'hero.slide4.subtext':
-    'Industry-specific software to optimize your operations.',
-  'hero.slide4.cta': 'View Business Solutions',
 
   'solutions.title': 'What We Deliver',
   'solutions.subtitle': 'Tailored digital systems for every sector.',
@@ -146,6 +135,7 @@ const en: Record<TranslationKey, string> = {
   'portfolio.title': 'Our Work',
   'portfolio.subtitle': 'Real systems and platforms we’ve built and deployed.',
   'portfolio.visitSite': 'Visit Live Site',
+  'portfolio.live': 'Live',
   'portfolio.proj1.title': 'CVA System',
   'portfolio.proj1.desc':
     'Full-cycle cash & voucher assistance platform for humanitarian distributions — intake, scoring, multi-stage approvals, barcode-based distribution, and financial reconciliation.',
@@ -230,23 +220,17 @@ const ar: Record<TranslationKey, string> = {
   'nav.about': 'من نحن',
   'nav.contact': 'تواصل معنا',
 
-  'hero.slide1.headline': 'أنظمة مخصصة للمنظمات غير الربحية والشركات',
-  'hero.slide1.subtext':
+  'hero.headline': 'أنظمة مخصصة للمنظمات غير الربحية والشركات',
+  'hero.subtext':
     'من أتمتة العمليات إلى الحضور الرقمي — نبني ما تحتاجه بالضبط.',
-  'hero.slide1.cta1': 'استكشف حلولنا',
-  'hero.slide1.cta2': 'تواصل معنا',
-  'hero.slide2.headline': 'أنظمة إدارة متكاملة',
-  'hero.slide2.subtext':
+  'hero.cta1': 'استكشف حلولنا',
+  'hero.cta2': 'تواصل معنا',
+  'hero.point1.title': 'أنظمة إدارة متكاملة',
+  'hero.point1.desc':
     'سهّل المشتريات والعقود والموارد البشرية والرقابة بحلول مصممة خصيصاً.',
-  'hero.slide2.cta': 'اعرف المزيد',
-  'hero.slide3.headline': 'آمن، ذكي، وقابل للبحث',
-  'hero.slide3.subtext':
+  'hero.point2.title': 'آمن، ذكي، وقابل للبحث',
+  'hero.point2.desc':
     'رقمن ونظّم مستنداتك لسهولة الوصول والامتثال.',
-  'hero.slide3.cta': 'اكتشف الأرشفة',
-  'hero.slide4.headline': 'كفاءة للشحن والصيانة والمخازن والحجوزات',
-  'hero.slide4.subtext':
-    'برمجيات متخصصة لكل صناعة لتحسين عملياتك.',
-  'hero.slide4.cta': 'عرض حلول الأعمال',
 
   'solutions.title': 'ما نقدمه',
   'solutions.subtitle': 'أنظمة رقمية مصممة لكل قطاع.',
@@ -274,6 +258,7 @@ const ar: Record<TranslationKey, string> = {
   'portfolio.title': 'أعمالنا',
   'portfolio.subtitle': 'أنظمة ومنصات حقيقية قمنا ببنائها وإطلاقها فعليًا.',
   'portfolio.visitSite': 'زيارة الموقع',
+  'portfolio.live': 'يعمل الآن',
   'portfolio.proj1.title': 'نظام CVA لإدارة المساعدات النقدية والقسائم',
   'portfolio.proj1.desc':
     'منصة متكاملة لإدارة المساعدات النقدية والقسائم للتوزيعات الإنسانية — من الفرز والتقييم إلى الموافقات متعددة المراحل والتوزيع عبر الباركود والتسوية المالية.',
